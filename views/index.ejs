@@ -14,7 +14,7 @@
       <div class="ps-row ps-padding-64" id="about">
         <div class="ps-col m6 ps-padding-large ps-hide-small">
           <img
-            src="/images/principal.jpg"
+            src="/images/<%= imageAbout %>"
             class="ps-round ps-image ps-opacity-min"
             alt="SAbores que enamoran"
             width="600"
@@ -23,7 +23,7 @@
         </div>
 
         <div class="ps-col m6 ps-padding-large">
-          <h1 class="ps-center">Pimienta & Sal</h1>
+          <h1 class="ps-center"><%= title %></h1>
           <br />
           <p class="ps-large">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur
@@ -51,7 +51,7 @@
           <h1 class="ps-center">Nuentro Menu</h1>
           <br />
           <% products.forEach(product => { %>
-            <h4><%= product.name %> </h4>
+            <h4><a href="/detail/<%= product.id %> "><%= product.name %></a></h4>
           <p class="ps-text-grey">
             <%= product.description %>  U$S<%= product.price.toFixed(2) %>
           </p>
